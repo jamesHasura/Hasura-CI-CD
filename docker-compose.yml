@@ -10,7 +10,7 @@ services:
   graphql-engine:
     image: hasura/graphql-engine:v2.17.0
     ports:
-      - '8080:8080'
+      - '8088:8080'
     depends_on:
       - 'postgres'
     restart: always
@@ -27,6 +27,6 @@ services:
       ## uncomment next line to run console offline (i.e load console assets from server instead of CDN)
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
       ## uncomment next line to set an admin secret
-      HASURA_GRAPHQL_ADMIN_SECRET: 9Lxo8UOx9bmUMUmvrIhpWJkSybC2CJntq2WaO17EgAz6WWuBunDGImkH7LqlNtkS
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
 volumes:
   db_data:
